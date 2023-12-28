@@ -1,35 +1,40 @@
-// Run this script to launch the server.
-// The server should run on localhost port 8000.
-// This is where you should start writing server-side code for this application.
+require("dotenv").config();
 const express = require("express");
+const path = require("path");
 const session = require("express-session");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-if (process.argv.length < 3) {
-  console.log("Please provide a session secret.");
-  process.exit(1);
-}
-
 const app = express();
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+
+const allowedOrigins = ["https://textoverflow.tiagowu.com", "https://www.textoverflow.tiagowu.com", "http://localhost:3000"];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+  optionsSuccessStatus: 200,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const secret = process.argv[2];
 app.use(
   session({
-    secret: `${secret}`,
+    secret: `${process.env.SESSION_SECRET}`,
     cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 },
     resave: false,
     saveUninitialized: false,
   })
 );
+
+app.use("/", express.static(path.join(__dirname, "../client/public")));
 
 app.use("/", require("./routes/users.js"));
 app.use("/answers", require("./routes/answers.js"));
@@ -37,13 +42,23 @@ app.use("/comments", require("./routes/comments.js"));
 app.use("/questions", require("./routes/questions.js"));
 app.use("/tags", require("./routes/tags.js"));
 
-const port = 8000;
-const mongoDB = "mongodb://127.0.0.1:27017/fake_so";
-
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-const db = mongoose.connection;
-db.on("error", console.error.bind(console, "MongoDB connection error:"));
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.get("/", (_, res) => {
+  res.sendFile(path.join(__dirname, "../client/public/index.html"));
 });
+
+const port = process.env.PORT || 8000;
+const mongoURI = process.env.MONGO_URI;
+
+mongoose.set("strictQuery", true);
+(async () => {
+  try {
+    await mongoose.connect(mongoURI);
+    console.log("Connected to MongoDB");
+
+    app.listen(port, () => {
+      console.log(`App is running on port ${port}`);
+    });
+  } catch (error) {
+    console.error("Failed to connect to MongoDB:", error);
+  }
+})();
