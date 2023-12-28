@@ -66,7 +66,7 @@ const Header = ({ user, onUserChange, onContentChange }) => {
 
   return (
     <div id="header" className="header">
-      <h1 className="header-title">Fake Stack Overflow</h1>
+      <h1 className="header-title">Text Overflow</h1>
       <div className="header-right">
         <form onSubmit={handleSearchSubmit}>
           <input
