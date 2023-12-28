@@ -4,7 +4,7 @@ const WelcomePage = ({ onContentChange }) => {
   return (
     <div className="welcome-page">
       <div className="welcome-container">
-        <h2>Welcome to Fake Stack Overflow!</h2>
+        <h2>Welcome to Text Overflow!</h2>
         <div className="welcome-action">
           <p>Don't have an account?</p>
           <button onClick={() => onContentChange({ text: "sign-up" })}>Sign Up</button>
