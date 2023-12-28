@@ -1,0 +1,90 @@
+.user-profile h2 {
+  margin: 0;
+}
+
+.user-profile-info {
+  padding: 20px 40px 40px 40px;
+  border-bottom: 2px dashed black;
+}
+
+.user-profile-info p {
+  margin: 0;
+  padding-top: 8px;
+}
+
+.user-questions-asked,
+.user-tags-created,
+.user-questions-answered,
+.user-list {
+  margin: 0;
+  padding: 20px 40px 40px 40px;
+  border-bottom: 2px dashed black;
+}
+
+.user-questions-asked p {
+  margin: 0;
+  padding: 16px;
+}
+
+.user-question-info,
+.user-card {
+  border-bottom: 2px dashed black;
+}
+
+.user-question-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-question-metadata {
+  margin-left: auto;
+  width: 160px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-card button {
+  padding: 4px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  border: 1px solid black;
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+.user-card button:hover {
+  background-color: royalblue;
+}
+
+.user-question-title,
+.user-card-info {
+  font-size: 20px;
+}
+
+.user-tags-created,
+.user-questions-answered {
+  font-size: 24px;
+}
+
+.user-question-title a,
+.user-tags-created a,
+.user-questions-answered a,
+.user-list a {
+  color: cornflowerblue;
+  cursor: pointer;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.user-question-title a:hover,
+.user-tags-created a:hover,
+.user-questions-answered a:hover,
+.user-list a:hover {
+  filter: brightness(80%);
+}

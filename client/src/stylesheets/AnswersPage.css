@@ -1,0 +1,73 @@
+.answers-header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 20px 40px 40px 40px;
+}
+
+.answers-header h2 {
+  margin: 0px;
+}
+
+.ask-button-container {
+  width: 124px;
+}
+
+.answers-num-title {
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.answers-title {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.answers-question-info {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  padding: 20px 40px 40px 40px;
+  border-bottom: 2px dashed black;
+}
+
+.question-views {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.answers-question-data {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.question-text {
+  margin: 0;
+  font-size: 16px;
+  min-height: 32px;
+}
+
+.answers-question-metadata {
+  margin-left: auto;
+  max-width: 160px;
+  min-width: 160px;
+}
+
+.answers-question-metadata .question-asked-by {
+  margin: 0;
+  color: red;
+  word-break: break-all;
+}
+
+.answers-question-metadata .question-ask-date {
+  margin: 0;
+  color: gray;
+  white-space: nowrap;
+}
+
+.answers-page-bottom {
+  padding: 16px 40px;
+}

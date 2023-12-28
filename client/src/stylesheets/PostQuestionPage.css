@@ -1,0 +1,35 @@
+.post-question-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 40px;
+}
+
+.post-question-bottom {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.post-question-bottom p {
+  color: red;
+  margin: 0;
+}
+
+.post-question-button,
+.post-question-bottom button {
+  height: 30px;
+  width: 240px;
+  color: white;
+  background-color: cornflowerblue;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.post-question-button:hover,
+.post-question-bottom button:hover {
+  background-color: royalblue;
+}

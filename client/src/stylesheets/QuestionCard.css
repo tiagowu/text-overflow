@@ -1,0 +1,111 @@
+.question-card {
+  padding: 36px 18px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  border-bottom: 2px dashed black;
+}
+
+.question-card p {
+  margin: 0;
+}
+
+.question-card .question-views-num {
+  white-space: nowrap;
+  margin: 0;
+}
+
+.question-card .question-answers-num {
+  white-space: nowrap;
+}
+
+.question-left {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.question-data {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.question-voted {
+  background-color: mediumblue !important;
+}
+
+.question-vote {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.question-vote button {
+  padding: 4px;
+  font-size: 12px;
+  color: white;
+  outline: none;
+  border-radius: 8px;
+  border: none;
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+.question-vote button:not(:disabled):hover {
+  background-color: royalblue;
+}
+
+.question-vote button:disabled {
+  filter: brightness(80%);
+  cursor: default;
+}
+
+.question-votes-num {
+  text-align: center;
+}
+
+.question-metadata {
+  margin-left: auto;
+  max-width: 160px;
+  min-width: 160px;
+}
+
+.question-metadata .question-asked-by {
+  color: red;
+  word-break: break-all;
+}
+
+.question-metadata .question-ask-date {
+  color: gray;
+}
+
+.question-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.question-info .question-title a {
+  font-size: 20px;
+  color: cornflowerblue;
+  cursor: pointer;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.question-info .question-title a:hover {
+  filter: brightness(80%);
+}
+
+.tags-container .question-tag {
+  margin: 0px 4px 4px 0px;
+  color: white;
+  padding: 4px 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: dimgray;
+  word-break: break-all;
+  display: inline-block;
+}

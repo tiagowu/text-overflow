@@ -1,0 +1,5 @@
+#main {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100vh - 64px);
+}

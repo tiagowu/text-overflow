@@ -1,0 +1,35 @@
+.post-answer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 40px;
+}
+
+.post-answer-bottom {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.post-answer-bottom p {
+  color: red;
+  margin: 0;
+}
+
+.post-answer-button,
+.post-answer-bottom button {
+  height: 30px;
+  width: 240px;
+  color: white;
+  background-color: cornflowerblue;
+  outline: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.post-answer-button:hover,
+.post-answer-bottom button:hover {
+  background-color: royalblue;
+}

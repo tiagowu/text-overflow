@@ -1,0 +1,47 @@
+.input-container .input-hint {
+  margin: 4px 0px;
+  font-style: italic;
+  font-size: 16px;
+  color: black;
+}
+
+.input-container p {
+  color: crimson;
+  margin: 0;
+  margin-top: 4px;
+}
+
+.input-label {
+  font-size: 24px;
+}
+
+.input-container input {
+  height: 32px;
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #525252;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-container input:focus {
+  border: 1px solid #000000;
+}
+
+.input-container textarea {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #525252;
+  outline: none;
+  resize: none;
+  font-family: Arial;
+  box-sizing: border-box;
+}
+
+.input-container textarea::placeholder {
+  font-size: 16px;
+}

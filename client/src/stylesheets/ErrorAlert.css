@@ -1,0 +1,28 @@
+.error-alert {
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 410px;
+  background: rgba(237, 40, 20, 0.7);
+  color: #fff;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.error-alert.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.error-content p {
+  margin: 0;
+  text-align: center;
+}
