@@ -34,8 +34,9 @@ app.use(
       secure: true,
       sameSite: "none",
     },
+    proxy: true,
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
   })
 );
 
