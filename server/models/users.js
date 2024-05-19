@@ -15,7 +15,7 @@ const userSchema = new Schema({
   },
   reputation: {
     type: Number,
-    default: 0,
+    default: 50,
   },
   questions_asked: [
     {
